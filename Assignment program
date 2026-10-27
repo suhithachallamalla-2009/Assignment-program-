@@ -1,0 +1,315 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if (n > 0)
+        printf("Positive number");
+    else if (n < 0)
+        printf("Negative number");
+    else
+        printf("Zero");
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    float length, breadth, area, perimeter;
+
+    printf("Enter length and breadth: ");
+    scanf("%f %f", &length, &breadth);
+
+    area = length * breadth;
+    perimeter = 2 * (length + breadth);
+
+    printf("Area = %.2f\n", area);
+    printf("Perimeter = %.2f\n", perimeter);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int age;
+
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    if (age >= 18)
+        printf("Eligible to vote");
+    else
+        printf("Not eligible to vote");
+
+}
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    float amount, discount = 0, delivery = 0, total;
+    int membership;
+
+    printf("Enter order amount: ");
+    scanf("%f", &amount);
+
+    printf("Enter membership (1-Premium, 0-Regular): ");
+    scanf("%d", &membership);
+
+    if (amount < 0 || (membership != 0 && membership != 1))
+    {
+        printf("Invalid input");
+    }
+    else
+    {
+        if (amount >= 500)
+        {
+            delivery = 0;
+
+            if (membership == 1)
+                discount = amount * 0.10;
+        }
+        else
+        {
+            delivery = 50;
+        }
+
+        total = amount - discount + delivery;
+
+        printf("Discount = Rs. %.2f\n", discount);
+        printf("Delivery charge = Rs. %.2f\n", delivery);
+        printf("Final amount = Rs. %.2f\n", total);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int age, credit;
+    float income;
+
+    printf("Enter age: ");
+    scanf("%d", &age);
+
+    printf("Enter monthly income: ");
+    scanf("%f", &income);
+
+    printf("Enter credit score: ");
+    scanf("%d", &credit);
+
+    if (age < 21 || age > 60)
+        printf("Loan rejected: age not in 21 to 60");
+    else if (income < 25000)
+        printf("Loan rejected: income below Rs.25000");
+    else if (credit < 700)
+        printf("Loan rejected: credit score below 700");
+    else
+        printf("Loan approved");
+
+}
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int id, password;
+
+    printf("Enter user ID: ");
+    scanf("%d", &id);
+
+    if (id != 101)
+    {
+        printf("User not found");
+    }
+    else
+    {
+        printf("Enter password: ");
+        scanf("%d", &password);
+
+        if (password == 4321)
+            printf("Login successful");
+        else
+            printf("Incorrect password");
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int mark;
+
+    printf("Enter mark out of 100: ");
+    scanf("%d", &mark);
+
+    if (mark < 0 || mark > 100)
+        printf("Invalid mark");
+    else if (mark >= 90)
+        printf("Grade O");
+    else if (mark >= 80)
+        printf("Grade A+");
+    else if (mark >= 70)
+        printf("Grade A");
+    else if (mark >= 60)
+        printf("Grade B");
+    else if (mark >= 50)
+        printf("Grade C");
+    else
+        printf("Fail");
+
+}
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    float weight, height, bmi;
+
+    printf("Enter weight in kg: ");
+    scanf("%f", &weight);
+
+    printf("Enter height in meters: ");
+    scanf("%f", &height);
+
+    if (weight <= 0 || height <= 0)
+    {
+        printf("Invalid input");
+    }
+    else
+    {
+        bmi = weight / (height * height);
+
+        printf("BMI = %.2f\n", bmi);
+
+        if (bmi < 18.5)
+            printf("Underweight");
+        else if (bmi < 25)
+            printf("Normal");
+        else if (bmi < 30)
+            printf("Overweight");
+        else
+            printf("Obese");
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    char ch;
+
+    printf("Enter a character: ");
+    scanf(" %c", &ch);
+
+    if (ch == 'a' || ch == 'e' || ch == 'i' ||
+        ch == 'o' || ch == 'u' ||
+        ch == 'A' || ch == 'E' || ch == 'I' ||
+        ch == 'O' || ch == 'U')
+    {
+        printf("Vowel");
+    }
+    else
+    {
+        printf("Consonant");
+    }
+
+}
+
+
+
